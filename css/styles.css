@@ -759,15 +759,17 @@ h3.my-profession{
 .social ul li{
     height: 40px;
     width: 40px;
-    font-size: 22px;
+    font-size: 20px;
     right: 100%;
     background-color: var(--bg-black-100);
     border-radius: 50%;
     border: 1px solid var(--bg-black-50);
     text-align: center;
-    line-height: 40px;
     margin: 10px 0;
     transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .social ul li:hover{
     border: 1px solid var(--skin-color);
@@ -790,14 +792,17 @@ h3.my-profession{
     bottom: 40px;
     height: 40px;
     width: 40px;
+    font-size: 22px;
     background-color: var(--bg-black-100);
     border-radius: 50%;
-    text-align: center;
-    line-height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid var(--bg-black-50);
+    cursor: pointer;
 }
 .scroll-top a{
-    color: var(--text-black-900);
+    color: var(--text-black-700);
 }
 
 
@@ -839,19 +844,16 @@ header{
 
 
 @media (max-width:1300px) {
-    .home-img::after {
-            border: 0;
-        }
-    
-        .home-img::before {
-            border: 0;
-        }
-        .home-img{
-            padding-right: 50px;
-        }
-        .about .about-content .skills .skill-item {
-            max-width: 95%;
-        }
+    .home-img::after,
+    .home-img::before {
+        border: 0;
+    }
+    .home-img{
+        padding-right: 50px;
+    }
+    .about .about-content .skills .skill-item {
+        max-width: 95%;
+    }
 }
 
 @media (max-width:1199px){
@@ -927,6 +929,7 @@ header{
     .social ul li{
         height: 30px;
         width: 30px;
+        font-size: 16px;
     }
 }
 
@@ -947,5 +950,9 @@ header{
     }
     .inflo-note{
         font-size: 14px;
+    }
+    .aside .logo a::after,
+    .aside .logo a::before{
+        display: none;
     }
 }
